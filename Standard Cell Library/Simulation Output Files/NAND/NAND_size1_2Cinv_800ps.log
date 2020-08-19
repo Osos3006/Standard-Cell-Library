@@ -1,0 +1,29 @@
+Circuit: *** SPICE deck for cell NAND_size1_2Cinv_800ps{lay} from library NAND_gate
+
+WARNING: Node F is floating.
+
+WARNING: Less than two connections to node F.  This node is used by CLOAD.
+Direct Newton iteration for .op point succeeded.
+
+tpdr=2.11945e-008 FROM 0 TO 2.11945e-008
+tpdf=9.57173e-011 FROM 4e-010 TO 4.95717e-010
+
+
+Date: Wed Jul 08 00:55:30 2020
+Total elapsed time: 0.252 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4227
+traniter = 4215
+tranpoints = 1466
+accept = 1361
+rejected = 105
+matrix size = 36
+fillins = 0
+solver = Normal
+Matrix Compiler1: 3.45 KB object code size  0.7/0.4/[0.2]
+Matrix Compiler2: 4.10 KB object code size  1.9/0.4/[0.3]
+
+

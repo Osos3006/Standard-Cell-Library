@@ -1,0 +1,25 @@
+Circuit: *** SPICE deck for cell function_6_size4_2Cinv_800ps_tpdf_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Direct Newton iteration for .op point succeeded.
+
+tpdf=4.05096e-010 FROM 4e-010 TO 8.05096e-010
+
+
+Date: Wed Jul 08 11:14:13 2020
+Total elapsed time: 0.312 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5216
+traniter = 5199
+tranpoints = 1991
+accept = 1720
+rejected = 271
+matrix size = 73
+fillins = 2
+solver = Normal
+Matrix Compiler1: 8.67 KB object code size  1.4/0.7/[0.4]
+Matrix Compiler2: 9.16 KB object code size  0.7/0.8/[0.6]
+
+

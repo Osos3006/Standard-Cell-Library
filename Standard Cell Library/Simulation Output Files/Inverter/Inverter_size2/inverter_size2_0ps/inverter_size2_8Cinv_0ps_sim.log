@@ -1,0 +1,28 @@
+Circuit: *** SPICE deck for cell inverter_size2_1Cinv_0ps_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Limiting rise time of source vinput to 2e-009
+Limiting fall time of source vinput to 2e-009
+Direct Newton iteration for .op point succeeded.
+
+tpdf=1.92831e-009 FROM 1e-009 TO 2.92831e-009
+tpdr=7.75821e-010 FROM 2.3e-008 TO 2.37758e-008
+
+
+Date: Wed Jul 08 20:26:09 2020
+Total elapsed time: 0.097 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3340
+traniter = 3334
+tranpoints = 1514
+accept = 1335
+rejected = 179
+matrix size = 13
+fillins = 0
+solver = Normal
+Matrix Compiler1: 960 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.31 KB object code size  0.1/0.1/[0.1]
+
+

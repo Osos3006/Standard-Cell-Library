@@ -1,0 +1,20 @@
+*** SPICE deck for cell inverter_size4_1Cinv_100ps_sim{lay} from library DDII_P1-Std_Cell_Library
+*** Created on Tue Jun 30, 2020 14:27:30
+*** Last revised on Wed Jul 08, 2020 21:01:39
+*** Written on Wed Jul 08, 2020 21:01:45 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: inverter_size4_1Cinv_100ps_sim{lay}
+Mnmos@0 out input gnd gnd nmos-BSIM130 L=0.14U W=0.84U AS=1.137P AD=1.411P PS=7.7U PD=7.56U
+Mpmos@1 out input vdd vdd pmos L=0.14U W=5.88U AS=3.41P AD=1.411P PS=17.92U PD=7.56U
+
+* Spice Code nodes in cell cell 'inverter_size4_1Cinv_100ps_sim{lay}'
+vdd vdd 0 dc 1.8
+vinput input 0 DC pulse 0 1.8 0n 100p 100p 20n 50n
+cload out 0 520fF
+.tran 0 500n
+.measure tpdf trig v(input) val=0.9 rise=1 TARG v(out) val=0.9 fall=1
+.measure tpdr trig v(input) val=0.9 fall=1 TARG v(out) val=0.9 rise=1
+.include D:\AUC\summer 2020\DD2\Projects\project 1\electric files\marwan_almost done\BSIM4_130nm.txt
+.END

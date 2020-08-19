@@ -1,0 +1,25 @@
+Circuit: *** SPICE deck for cell function_6_size4_1Cinv_800ps_tpdr_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Direct Newton iteration for .op point succeeded.
+
+tpdr=5.39018e-010 FROM 4e-010 TO 9.39018e-010
+
+
+Date: Wed Jul 08 18:58:01 2020
+Total elapsed time: 1.032 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5784
+traniter = 5759
+tranpoints = 1989
+accept = 1709
+rejected = 280
+matrix size = 73
+fillins = 2
+solver = Normal
+Matrix Compiler1: 8.67 KB object code size  7.2/1.7/[1.0]
+Matrix Compiler2: 9.16 KB object code size  3.7/1.9/[1.3]
+
+

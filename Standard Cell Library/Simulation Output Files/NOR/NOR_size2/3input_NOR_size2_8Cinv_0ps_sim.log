@@ -1,0 +1,28 @@
+Circuit: *** SPICE deck for cell 3input_NOR_size2_8Cinv_0ps_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Limiting rise time of source va to 2e-009
+Limiting fall time of source va to 2e-009
+Direct Newton iteration for .op point succeeded.
+
+tpdf=2.08501e-009 FROM 1e-009 TO 3.08501e-009
+tpdr=4.23943e-010 FROM 2.3e-008 TO 2.34239e-008
+
+
+Date: Wed Jul 08 22:08:24 2020
+Total elapsed time: 0.343 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4542
+traniter = 4536
+tranpoints = 1653
+accept = 1417
+rejected = 236
+matrix size = 35
+fillins = 0
+solver = Normal
+Matrix Compiler1: 3.39 KB object code size  1.0/0.5/[0.3]
+Matrix Compiler2: 3.92 KB object code size  0.5/0.6/[0.3]
+
+

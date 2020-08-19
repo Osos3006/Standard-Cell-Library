@@ -1,0 +1,28 @@
+*** SPICE deck for cell function_4_size2_4Cinv_400ps_tpdr_sim{lay} from library DDII_P1-Std_Cell_Library
+*** Created on Thu Jul 02, 2020 21:06:14
+*** Last revised on Wed Jul 08, 2020 23:29:37
+*** Written on Wed Jul 08, 2020 23:29:46 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: function_4_size2_4Cinv_400ps_tpdr_sim{lay}
+Mnmos@0 net@0 x f gnd nmos-BSIM130 L=0.14U W=0.84U AS=0.779P AD=0.107P PS=4.375U PD=1.225U
+Mnmos@1 gnd y net@0 gnd nmos-BSIM130 L=0.14U W=0.84U AS=0.107P AD=0.715P PS=1.225U PD=4.69U
+Mnmos@2 net@1 z gnd gnd nmos-BSIM130 L=0.14U W=0.84U AS=0.715P AD=0.107P PS=4.69U PD=1.225U
+Mnmos@3 f w net@1 gnd nmos-BSIM130 L=0.14U W=0.84U AS=0.107P AD=0.779P PS=1.225U PD=4.375U
+Mpmos@0 f z net@9 vdd pmos L=0.14U W=5.88U AS=1.749P AD=0.779P PS=9.415U PD=4.375U
+Mpmos@3 net@9 w f vdd pmos L=0.14U W=5.88U AS=0.779P AD=1.749P PS=4.375U PD=9.415U
+Mpmos@4 vdd x net@9 vdd pmos L=0.14U W=5.88U AS=1.749P AD=3.043P PS=9.415U PD=10.395U
+Mpmos@5 net@9 y vdd vdd pmos L=0.14U W=5.88U AS=3.043P AD=1.749P PS=10.395U PD=9.415U
+
+* Spice Code nodes in cell cell 'function_4_size2_4Cinv_400ps_tpdr_sim{lay}'
+vdd vdd 0 dc 1.8
+vx x 0 DC pulse 0 1.8 0n 400p 400p 20n 50n
+cload f 0 520fF
+vy y 0 dc 1.8
+vw w 0 dc 0
+vz z 0 dc 1.8
+.tran 0 500n
+.measure tpdr trig v(x) val=0.9 fall=1 TARG v(f) val=0.9 rise=1
+.include D:\6th semester\Digital Design II\Projects\Project 1\Standard Cell Library\BSIM4_130nm.txt
+.END

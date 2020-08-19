@@ -1,0 +1,26 @@
+Circuit: *** SPICE deck for cell 3input_NOR_size4_4Cinv_800ps_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Direct Newton iteration for .op point succeeded.
+
+tpdf=6.67044e-010 FROM 4e-010 TO 1.06704e-009
+tpdr=1.08157e-010 FROM 2.12e-008 TO 2.13082e-008
+
+
+Date: Wed Jul 08 22:22:35 2020
+Total elapsed time: 0.424 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4482
+traniter = 4476
+tranpoints = 1850
+accept = 1633
+rejected = 217
+matrix size = 35
+fillins = 0
+solver = Normal
+Matrix Compiler1: 3.39 KB object code size  2.3/1.1/[0.6]
+Matrix Compiler2: 3.92 KB object code size  1.1/1.3/[0.7]
+
+

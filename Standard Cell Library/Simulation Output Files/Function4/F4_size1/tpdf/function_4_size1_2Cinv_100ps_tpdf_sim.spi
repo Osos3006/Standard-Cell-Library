@@ -1,0 +1,28 @@
+*** SPICE deck for cell function_4_size1_2Cinv_100ps_tpdf_sim{lay} from library DDII_P1-Std_Cell_Library
+*** Created on Thu Jul 02, 2020 21:06:14
+*** Last revised on Wed Jul 08, 2020 22:30:21
+*** Written on Wed Jul 08, 2020 22:30:30 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: function_4_size1_2Cinv_100ps_tpdf_sim{lay}
+Mnmos@0 net@0 x f gnd nmos-BSIM130 L=0.14U W=0.42U AS=0.39P AD=0.062P PS=2.485U PD=0.805U
+Mnmos@1 gnd y net@0 gnd nmos-BSIM130 L=0.14U W=0.42U AS=0.062P AD=0.468P PS=0.805U PD=3.36U
+Mnmos@2 net@1 z gnd gnd nmos-BSIM130 L=0.14U W=0.42U AS=0.468P AD=0.062P PS=3.36U PD=0.805U
+Mnmos@3 f w net@1 gnd nmos-BSIM130 L=0.14U W=0.42U AS=0.062P AD=0.39P PS=0.805U PD=2.485U
+Mpmos@0 f z net@9 vdd pmos L=0.14U W=2.94U AS=0.875P AD=0.39P PS=5.005U PD=2.485U
+Mpmos@3 net@9 w f vdd pmos L=0.14U W=2.94U AS=0.39P AD=0.875P PS=2.485U PD=5.005U
+Mpmos@4 vdd x net@9 vdd pmos L=0.14U W=2.94U AS=0.875P AD=1.757P PS=5.005U PD=6.475U
+Mpmos@5 net@9 y vdd vdd pmos L=0.14U W=2.94U AS=1.757P AD=0.875P PS=6.475U PD=5.005U
+
+* Spice Code nodes in cell cell 'function_4_size1_2Cinv_100ps_tpdf_sim{lay}'
+vdd vdd 0 dc 1.8
+vx x 0 DC pulse 0 1.8 0n 100p 100p 20n 50n
+cload f 0 260fF
+vy y 0 dc 1.8
+vw w 0 dc 0
+vz z 0 dc 0
+.tran 0 500n
+.measure tpdf trig v(x) val=0.9 rise=1 TARG v(f) val=0.9 fall=1
+.include D:\6th semester\Digital Design II\Projects\Project 1\Standard Cell Library\BSIM4_130nm.txt
+.END

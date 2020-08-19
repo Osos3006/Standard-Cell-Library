@@ -1,0 +1,26 @@
+Circuit: *** SPICE deck for cell inverter_size1_1Cinv_400ps_sim{lay} from library DDII_P1-Std_Cell_Library
+
+Direct Newton iteration for .op point succeeded.
+
+tpdf=4.8946e-010 FROM 2e-010 TO 6.8946e-010
+tpdr=1.87511e-010 FROM 2.06e-008 TO 2.07875e-008
+
+
+Date: Wed Jul 08 20:48:58 2020
+Total elapsed time: 0.196 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3819
+traniter = 3813
+tranpoints = 1697
+accept = 1508
+rejected = 189
+matrix size = 13
+fillins = 0
+solver = Normal
+Matrix Compiler1: 960 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.31 KB object code size  0.1/0.1/[0.1]
+
+

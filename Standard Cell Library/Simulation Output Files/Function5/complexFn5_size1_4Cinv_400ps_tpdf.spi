@@ -1,0 +1,29 @@
+*** SPICE deck for cell complexFn5_size1_4Cinv_400ps_tpdf{lay} from library NAND_gate
+*** Created on Thu Jul 02, 2020 22:01:01
+*** Last revised on Wed Jul 08, 2020 03:49:02
+*** Written on Wed Jul 08, 2020 03:49:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: complexFn5_size1_4Cinv_400ps_tpdf{lay}
+Mnmos@2 net@622 y OUT gnd nmos L=0.14U W=0.42U AS=0.782P AD=0.088P PS=2.898U PD=0.84U
+Mnmos@5 gnd z net@622 gnd nmos L=0.14U W=0.42U AS=0.088P AD=1.005P PS=0.84U PD=6.37U
+Mnmos@6 net@414 x gnd gnd nmos L=0.14U W=0.42U AS=1.005P AD=0.172P PS=6.37U PD=1.377U
+Mnmos@8 net@414 y OUT gnd nmos L=0.14U W=0.42U AS=0.782P AD=0.172P PS=2.898U PD=1.377U
+Mnmos@9 OUT z net@414 gnd nmos L=0.14U W=0.42U AS=0.172P AD=0.782P PS=1.377U PD=2.898U
+Mpmos@0 net@341 y net@1 vdd pmos L=0.14U W=4.41U AS=1.904P AD=0.926P PS=7.508U PD=4.83U
+Mpmos@1 net@1 y OUT vdd pmos L=0.14U W=4.41U AS=0.782P AD=1.904P PS=2.898U PD=7.508U
+Mpmos@2 vdd z net@341 vdd pmos L=0.14U W=4.41U AS=0.926P AD=3.13P PS=4.83U PD=10.71U
+Mpmos@5 OUT z net@1 vdd pmos L=0.14U W=4.41U AS=1.904P AD=0.782P PS=7.508U PD=2.898U
+Mpmos@6 net@1 x vdd vdd pmos L=0.14U W=2.94U AS=3.13P AD=1.904P PS=10.71U PD=7.508U
+
+* Spice Code nodes in cell cell 'complexFn5_size1_4Cinv_400ps_tpdf{lay}'
+vdd vdd 0 dc 1.8
+vx x 0 DC pulse 0 1.8 0n 400p 400p 20n 50n
+vy y 0 dc 1.8
+vz z 0 dc 0
+.tran 0 500n
+cload f 0 520fF
+.measure tpdf trig v(x) val=0.9 rise=1 TARG v(OUT) val=0.9 fall=1
+.include D:\summer 2020\DD2\project1_donia\BSIM4_130nm.txt
+.END

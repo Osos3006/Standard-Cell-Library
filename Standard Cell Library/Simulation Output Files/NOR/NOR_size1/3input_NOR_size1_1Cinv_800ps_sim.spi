@@ -1,0 +1,26 @@
+*** SPICE deck for cell 3input_NOR_size1_1Cinv_800ps_sim{lay} from library DDII_P1-Std_Cell_Library
+*** Created on Thu Jul 02, 2020 05:38:17
+*** Last revised on Wed Jul 08, 2020 21:58:46
+*** Written on Wed Jul 08, 2020 21:58:53 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 3input_NOR_size1_1Cinv_800ps_sim{lay}
+Mnmos@0 y A gnd gnd nmos-BSIM130 L=0.14U W=0.21U AS=0.341P AD=0.497P PS=2.707U PD=3.203U
+Mnmos@1 gnd B y gnd nmos-BSIM130 L=0.14U W=0.21U AS=0.497P AD=0.341P PS=3.203U PD=2.707U
+Mnmos@2 y C gnd gnd nmos-BSIM130 L=0.14U W=0.21U AS=0.341P AD=0.497P PS=2.707U PD=3.203U
+Mpmos@0 net@64 A vdd vdd pmos L=0.14U W=4.41U AS=2.433P AD=0.481P PS=13.93U PD=4.795U
+Mpmos@1 net@65 B net@64 vdd pmos L=0.14U W=4.41U AS=0.481P AD=0.481P PS=4.795U PD=4.795U
+Mpmos@2 y C net@65 vdd pmos L=0.14U W=4.41U AS=0.481P AD=0.497P PS=4.795U PD=3.203U
+
+* Spice Code nodes in cell cell '3input_NOR_size1_1Cinv_800ps_sim{lay}'
+vdd vdd 0 dc 1.8
+vA A 0 DC pulse 0 1.8 0n 800p 800p 20n 50n
+vB B 0 dc 0
+vC C 0 dc 0
+.tran 0 500n
+cload y 0 130fF
+.measure tpdf trig v(A) val=0.9 rise=1 TARG v(y) val=0.9 fall=1
+.measure tpdr trig v(A) val=0.9 fall=1 TARG v(y) val=0.9 rise=1
+.include D:\6th semester\Digital Design II\Projects\Project 1\Standard Cell Library\BSIM4_130nm.txt
+.END

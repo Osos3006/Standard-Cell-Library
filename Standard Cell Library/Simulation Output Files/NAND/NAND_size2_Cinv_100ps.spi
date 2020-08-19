@@ -1,0 +1,26 @@
+*** SPICE deck for cell NAND_size2_Cinv_100ps{lay} from library NAND_gate
+*** Created on Wed Jul 01, 2020 12:27:20
+*** Last revised on Wed Jul 08, 2020 01:32:45
+*** Written on Wed Jul 08, 2020 01:32:52 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: NAND_size2_Cinv_100ps{lay}
+Mnmos@1 net@7 a OUT gnd nmos L=0.14U W=1.26U AS=1.061P AD=0.265P PS=4.438U PD=1.68U
+Mnmos@2 net@8 b net@7 gnd nmos L=0.14U W=1.26U AS=0.265P AD=0.265P PS=1.68U PD=1.68U
+Mnmos@3 gnd c net@8 gnd nmos L=0.14U W=1.26U AS=0.265P AD=1.414P PS=1.68U PD=8.498U
+Mpmos@1 vdd b OUT vdd pmos L=0.14U W=2.94U AS=1.061P AD=1.527P PS=4.438U PD=6.837U
+Mpmos@2 OUT c vdd vdd pmos L=0.14U W=2.94U AS=1.527P AD=1.061P PS=6.837U PD=4.438U
+Mpmos@3 OUT a vdd vdd pmos L=0.14U W=2.94U AS=1.527P AD=1.061P PS=6.837U PD=4.438U
+
+* Spice Code nodes in cell cell 'NAND_size2_Cinv_100ps{lay}'
+vdd vdd 0 dc 1.8
+va a 0 DC pulse 0 1.8 0n 100p 100p 20n 50n
+cload f 0 130fF
+vb b 0 dc 1.8
+vc c 0 dc 1.8
+.tran 0 500n
+.measure tpdr v(a) val=0.9 fall=1 TARG v(OUT) val=0.9 rise=1
+.measure tpdf trig v(a) val=0.9 rise=1 TARG v(OUT) val=0.9 fall=1
+.include D:\summer 2020\DD2\project1_donia\BSIM4_130nm.txt
+.END
